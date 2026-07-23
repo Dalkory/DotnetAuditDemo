@@ -1,0 +1,9 @@
+**/bin
+**/obj
+.git
+.github
+.vs
+TestResults
+README.md
+AUDIT_REPORT.md
+IMPLEMENTATION_PLAN.md
