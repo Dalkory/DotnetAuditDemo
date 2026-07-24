@@ -1,5 +1,9 @@
 # DotnetAuditDemo
 
+[![CI](https://github.com/Dalkory/DotnetAuditDemo/actions/workflows/ci.yml/badge.svg)](https://github.com/Dalkory/DotnetAuditDemo/actions/workflows/ci.yml)
+[![View sample audit](https://img.shields.io/badge/View_sample_audit-PDF-55C2FF)](https://dotnet-audit-studio.work1sdfsdfs.chatgpt.site/Dotnet_Audit_Demo_Report.pdf)
+[![Request an audit](https://img.shields.io/badge/Request_an_audit-5%2C000_%E2%82%BD%2B-9FE870)](https://dotnet-audit-studio.work1sdfsdfs.chatgpt.site/#request)
+
 An intentionally flawed ASP.NET Core backend used to demonstrate a practical
 `.NET Backend & AI Readiness Audit`.
 
@@ -7,6 +11,26 @@ An intentionally flawed ASP.NET Core backend used to demonstrate a practical
 > This repository contains deliberate security, performance and reliability
 > defects. It is a portfolio case study, not a production starter template.
 > All credentials in the repository are fake demo values.
+
+## Business impact demonstrated
+
+- Unauthorized customer data exposure detected
+- Committed credentials detected
+- Concurrency risk caused by singleton `DbContext`
+- N+1 database access detected
+- Unbounded data retrieval detected
+- Five priority issues fixed in a reviewable pull request
+
+| Verification | Before | After |
+|---|---|---|
+| Admin endpoint | Accessible without authorization | Protected with 401/403 |
+| Database access | N+1 query pattern | Single projected query |
+| Tracked configuration | Committed secret | Secret removed and rotated |
+| `DbContext` lifetime | Singleton | Scoped per request |
+| Application logs | Sensitive data recorded | Sensitive fields removed |
+
+The Before/After claims above are backed by code and automated tests in the
+remediation pull request.
 
 ## What this case demonstrates
 
@@ -22,7 +46,25 @@ Start with:
 
 1. [`AUDIT_REPORT.md`](AUDIT_REPORT.md) — executive summary and detailed findings.
 2. [`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md) — sequenced remediation plan.
-3. The remediation pull request — focused code changes with local validation.
+3. [The remediation pull request](https://github.com/Dalkory/DotnetAuditDemo/pull/1)
+   — focused code changes with local validation.
+4. [The 45-second walkthrough](docs/audit-walkthrough-45s.mp4) — a compact
+   overview of the audit, prioritization, and remediation evidence.
+
+[![First page of the sample audit report](docs/audit-report-preview.png)](https://dotnet-audit-studio.work1sdfsdfs.chatgpt.site/Dotnet_Audit_Demo_Report.pdf)
+
+## Audit packages
+
+| Service | Starting price | Result | Delivery |
+|---|---:|---|---:|
+| Problem diagnosis | 5,000 ₽ | Root cause evidence and fix plan | 1 business day |
+| Architecture second opinion | 10,000 ₽ | Decision review and risk analysis | 1 business day |
+| Performance review | 15,000 ₽ | EF Core/SQL findings and measurement plan | 2 business days |
+| Quick audit | 25,000 ₽ | Up to 7 findings, report, backlog, video | 3 business days |
+| Full audit | 50,000–80,000 ₽ | Complete technical assessment | 5–7 business days |
+| Audit + remediation | From 100,000 ₽ | Report and reviewable pull requests | By scope |
+
+[Request a fixed-scope project review](https://dotnet-audit-studio.work1sdfsdfs.chatgpt.site/#request)
 
 ## Architecture
 
@@ -74,9 +116,16 @@ The audit is code-focused. It is not a penetration test, does not inspect
 production infrastructure without access, and cannot guarantee discovery of
 every vulnerability.
 
+## Confidentiality
+
+Private repositories and confidential data are not shared with external AI
+services without the client's explicit permission. Scope, access rules,
+excluded areas, and any permitted AI use are agreed in writing before review.
+
 ## Contact
 
 Daniil Taushkanov — .NET Backend & AI Readiness Audits
 
+- Website: [Dotnet Audit Studio](https://dotnet-audit-studio.work1sdfsdfs.chatgpt.site)
 - Email: [taushkanovdaniil@gmail.com](mailto:taushkanovdaniil@gmail.com)
 - Telegram: [@DanilDotNet](https://t.me/DanilDotNet)
