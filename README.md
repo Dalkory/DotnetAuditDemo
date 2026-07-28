@@ -1,8 +1,8 @@
 # DotnetAuditDemo
 
 [![CI](https://github.com/Dalkory/DotnetAuditDemo/actions/workflows/ci.yml/badge.svg)](https://github.com/Dalkory/DotnetAuditDemo/actions/workflows/ci.yml)
-[![View sample audit](https://img.shields.io/badge/View_sample_audit-PDF-55C2FF)](https://dotnet-audit-studio.work1sdfsdfs.chatgpt.site/Dotnet_Audit_Demo_Report.pdf)
-[![Request an audit](https://img.shields.io/badge/Request_an_audit-5%2C000_%E2%82%BD%2B-9FE870)](https://dotnet-audit-studio.work1sdfsdfs.chatgpt.site/#request)
+[![View sample audit](https://img.shields.io/badge/View_sample_audit-PDF-55C2FF)](https://dotnet-audit-studio-services.dtauskanov3.chatgpt.site/Dotnet_Audit_Demo_Report.pdf)
+[![Request a review](https://img.shields.io/badge/Request_a_review-5%2C000_%E2%82%BD%2B-9FE870)](https://dotnet-audit-studio-services.dtauskanov3.chatgpt.site/en#request)
 
 An intentionally flawed ASP.NET Core backend used to demonstrate a practical
 `.NET Backend & AI Readiness Audit`.
@@ -51,7 +51,17 @@ Start with:
 4. [The 45-second walkthrough](docs/audit-walkthrough-45s.mp4) — a compact
    overview of the audit, prioritization, and remediation evidence.
 
-[![First page of the sample audit report](docs/audit-report-preview.png)](https://dotnet-audit-studio.work1sdfsdfs.chatgpt.site/Dotnet_Audit_Demo_Report.pdf)
+[![First page of the sample audit report](docs/audit-report-preview.png)](https://dotnet-audit-studio-services.dtauskanov3.chatgpt.site/Dotnet_Audit_Demo_Report.pdf)
+
+## Additional demonstration cases
+
+- [`Legacy .NET Modernization Assessment`](case-studies/legacy-modernization/README.md)
+  — a synthetic .NET Framework 4.7.2 assessment with a blocker map and a
+  phased migration plan. It demonstrates the assessment deliverable, not a
+  completed client migration.
+- [`Observability Starter for .NET`](case-studies/observability-starter/README.md)
+  — a buildable ASP.NET Core 8 example with OpenTelemetry, OTLP export,
+  health endpoints, custom business telemetry and an incident runbook.
 
 ## Audit packages
 
@@ -60,11 +70,16 @@ Start with:
 | Problem diagnosis | 5,000 ₽ | Root cause evidence and fix plan | 1 business day |
 | Architecture second opinion | 10,000 ₽ | Decision review and risk analysis | 1 business day |
 | Performance review | 15,000 ₽ | EF Core/SQL findings and measurement plan | 2 business days |
+| Independent PR review | 5,000 ₽ | Line-level findings and Approve / Changes required decision | By scope |
+| Live .NET debugging | 5,000 ₽ | Joint localization and a written next-step plan | 60–90 minutes |
+| Webhook & API reliability review | From 10,000 ₽ | Retry, timeout, idempotency and safe-failure map | 1–2 business days |
+| Observability Starter | From 15,000 ₽ | OTel, health checks, OTLP export and incident runbook | 2–3 business days |
+| Legacy modernization assessment | From 20,000 ₽ | Blockers, risk map and first-pilot migration plan | 2–3 business days |
 | Quick audit | 25,000 ₽ | Up to 7 findings, report, backlog, video | 3 business days |
 | Full audit | 50,000–80,000 ₽ | Complete technical assessment | 5–7 business days |
 | Audit + remediation | From 100,000 ₽ | Report and reviewable pull requests | By scope |
 
-[Request a fixed-scope project review](https://dotnet-audit-studio.work1sdfsdfs.chatgpt.site/#request)
+[Request a fixed-scope project review](https://dotnet-audit-studio-services.dtauskanov3.chatgpt.site/en#request)
 
 ## Architecture
 
@@ -126,6 +141,6 @@ excluded areas, and any permitted AI use are agreed in writing before review.
 
 Daniil Taushkanov — .NET Backend & AI Readiness Audits
 
-- Website: [Dotnet Audit Studio](https://dotnet-audit-studio.work1sdfsdfs.chatgpt.site)
+- Website: [Dotnet Audit Studio](https://dotnet-audit-studio-services.dtauskanov3.chatgpt.site/en)
 - Email: [taushkanovdaniil@gmail.com](mailto:taushkanovdaniil@gmail.com)
 - Telegram: [@DanilDotNet](https://t.me/DanilDotNet)
