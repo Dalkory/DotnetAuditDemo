@@ -62,6 +62,10 @@ Start with:
 - [`Observability Starter for .NET`](case-studies/observability-starter/README.md)
   — a buildable ASP.NET Core 8 example with OpenTelemetry, OTLP export,
   health endpoints, custom business telemetry and an incident runbook.
+- [`AI Repo Enablement for .NET`](case-studies/ai-repo-enablement/README.md)
+  — a safe-by-default agent-ready repository kit with `AGENTS.md`, Copilot
+  instructions, approval boundaries, a preflight checklist and five bounded
+  example tasks.
 
 ## Audit packages
 
@@ -75,6 +79,7 @@ Start with:
 | Webhook & API reliability review | From 10,000 ₽ | Retry, timeout, idempotency and safe-failure map | 1–2 business days |
 | Observability Starter | From 15,000 ₽ | OTel, health checks, OTLP export and incident runbook | 2–3 business days |
 | Legacy modernization assessment | From 20,000 ₽ | Blockers, risk map and first-pilot migration plan | 2–3 business days |
+| AI Repo Enablement for .NET | 25,000 ₽ | Agent instructions, safety boundaries, CI preflight and pilot tasks | 2 business days |
 | Quick audit | 25,000 ₽ | Up to 7 findings, report, backlog, video | 3 business days |
 | Full audit | 50,000–80,000 ₽ | Complete technical assessment | 5–7 business days |
 | Audit + remediation | From 100,000 ₽ | Report and reviewable pull requests | By scope |
