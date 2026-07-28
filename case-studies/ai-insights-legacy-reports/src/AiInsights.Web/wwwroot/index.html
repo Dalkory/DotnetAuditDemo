@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Insights for Legacy .NET Reports</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">DOTNET AUDIT STUDIO · LOCAL-FIRST POC</p>
+        <h1>AI Insights for<br><span>Legacy .NET Reports</span></h1>
+        <p class="lede">Превращает существующий XLSX или CSV в проверяемую карту отклонений — без переписывания WPF, ASP.NET или отчётной системы.</p>
+      </div>
+      <aside>
+        <div class="status"><i></i> Данные остаются локально</div>
+        <div class="price">Пилот <b>30 000 ₽</b></div>
+      </aside>
+    </header>
+
+    <section class="upload-panel">
+      <div>
+        <h2>Загрузите текущий отчёт</h2>
+        <p>Ожидаемые поля определяются автоматически: Date, Department, Product, Plan, Actual, Cost, DelayDays.</p>
+      </div>
+      <form id="form">
+        <label class="file">
+          <input id="file" name="file" type="file" accept=".xlsx,.csv">
+          <span id="fileLabel">Выбрать XLSX или CSV</span>
+        </label>
+        <button type="submit">Построить инсайты</button>
+      </form>
+      <div class="sample">Нет файла? <a href="/api/sample.xlsx">Скачать синтетический XLSX на 2 000 строк</a></div>
+    </section>
+
+    <section id="loading" class="hidden loading">Считаем метрики и собираем доказательства…</section>
+    <section id="error" class="hidden error"></section>
+
+    <section id="results" class="hidden">
+      <div class="summary-card">
+        <div>
+          <p class="eyebrow">EXECUTIVE SUMMARY</p>
+          <h2 id="summary"></h2>
+        </div>
+        <button id="export" class="secondary">Экспорт Markdown</button>
+      </div>
+
+      <div class="metrics">
+        <article><span>Строк обработано</span><strong id="rows">—</strong></article>
+        <article><span>Передано наружу</span><strong id="external">0</strong></article>
+        <article><span>Режим</span><strong>Safe preview</strong></article>
+      </div>
+
+      <div class="grid">
+        <article class="panel">
+          <p class="eyebrow">АНОМАЛИИ С ДОКАЗАТЕЛЬСТВАМИ</p>
+          <ol id="anomalies"></ol>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">РИСКИ</p>
+          <ul id="risks"></ul>
+          <p class="eyebrow sub">ВОПРОСЫ ДЛЯ РЕШЕНИЯ</p>
+          <ul id="questions"></ul>
+        </article>
+      </div>
+
+      <article class="panel table-panel">
+        <p class="eyebrow">ПОКАЗАТЕЛИ ПО ПОДРАЗДЕЛЕНИЯМ</p>
+        <table>
+          <thead><tr><th>Подразделение</th><th>План</th><th>Факт</th><th>Выполнение</th><th>Отклонение</th></tr></thead>
+          <tbody id="departments"></tbody>
+        </table>
+      </article>
+
+      <footer>
+        <span>Расчёты выполнены кодом. Модель не меняет исходные данные.</span>
+        <a href="https://dotnet-audit-studio.work1sdfsdfs.chatgpt.site/ru">Заказать PoC для своего отчёта →</a>
+      </footer>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
+
