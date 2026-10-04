@@ -19,18 +19,24 @@ An intentionally flawed ASP.NET Core backend used to demonstrate a practical
 - Concurrency risk caused by singleton `DbContext`
 - N+1 database access detected
 - Unbounded data retrieval detected
-- Five priority issues fixed in a reviewable pull request
+- Scoped remediation for findings F-001 through F-005 in an unmerged draft pull request
 
-| Verification | Before | After |
+| Area | Intentionally flawed baseline (`main`) | Draft PR #1 (`4aabfd3`, not merged) |
 |---|---|---|
-| Admin endpoint | Accessible without authorization | Protected with 401/403 |
-| Database access | N+1 query pattern | Single projected query |
-| Tracked configuration | Committed secret | Secret removed and rotated |
+| Admin endpoint | Accessible without authorization | Authentication required; test source asserts 401 for an anonymous request. Role-based 403 behavior is not demonstrated |
+| Database access | N+1 query pattern | Paginated projection in code; test source asserts a maximum page size of 100, not a SQL-query count |
+| Tracked configuration | Fake demo secrets committed | Demo values removed from tracked application configuration; runtime values supplied externally. No real production-secret rotation is demonstrated |
 | `DbContext` lifetime | Singleton | Scoped per request |
-| Application logs | Sensitive data recorded | Sensitive fields removed |
+| Application logs | Sensitive data recorded | Open finding F-011: login email/password and order customer email are still logged |
 
-The Before/After claims above are backed by code and automated tests in the
-remediation pull request.
+This is a synthetic demonstration, not a client case or a production-readiness
+claim. The table compares `main` with [draft PR #1 at commit
+`4aabfd3`](https://github.com/Dalkory/DotnetAuditDemo/pull/1/commits/4aabfd351571e42112f52aba619234a990821c9e).
+The PR has not been merged. Its test source contains assertions for the status
+endpoint, anonymous admin access returning 401, and an order-page size capped at
+100. Not every table row has an automated test. These checks do not demonstrate
+role-based authorization, sensitive-log removal, real credential rotation, or
+production readiness. This documentation correction does not claim a new test run.
 
 ## What this case demonstrates
 
@@ -40,7 +46,8 @@ remediation pull request.
 - 15 evidence-backed findings across security, data access, performance,
   reliability, testing and maintainability;
 - a prioritized remediation backlog with effort estimates;
-- a separate before/after pull request that fixes five findings.
+- a separate unmerged draft pull request addressing findings F-001 through F-005;
+  `main` retains the intentionally flawed baseline, including sensitive logging.
 
 Start with:
 
