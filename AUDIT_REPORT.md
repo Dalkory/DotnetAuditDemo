@@ -8,9 +8,9 @@
 PostgreSQL configuration, authentication, background processing, tests, Docker
 and CI
 
-**Reviewed by:** Daniil Taushkanov
+**Reviewed by:** dotnet-audit-studio
 
-**Contact:** taushkanovdaniil@gmail.com · @DanilDotNet
+**Contact:** https://dotnet-audit-studio.karloo1337228.chatgpt.site/en#request
 
 ## 1. Executive summary
 
