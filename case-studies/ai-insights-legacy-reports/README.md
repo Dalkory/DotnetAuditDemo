@@ -67,4 +67,4 @@ inferred from any spreadsheet. Production work still requires:
 - human review of recommendations.
 
 Formats and contact:
-https://dotnet-audit-studio.karloo1337228.chatgpt.site/en
+https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en
