@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/Dalkory/DotnetAuditDemo/actions/workflows/ci.yml/badge.svg)](https://github.com/Dalkory/DotnetAuditDemo/actions/workflows/ci.yml)
 [![View sample audit](https://img.shields.io/badge/View_sample_audit-Markdown-55C2FF)](AUDIT_REPORT.md)
-[![Request a review](https://img.shields.io/badge/Request_a_review-Scope_first-9FE870)](https://dotnet-audit-studio.karloo1337228.chatgpt.site/en#request)
+[![Request a review](https://img.shields.io/badge/Request_a_review-Scope_first-9FE870)](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en#request)
 
 An intentionally flawed ASP.NET Core backend used to demonstrate a practical
 `.NET Backend & AI Readiness Audit`.
@@ -97,7 +97,7 @@ Start with:
 | Full audit | 50,000–80,000 ₽ | Complete technical assessment | 5–7 business days |
 | Audit + remediation | From 100,000 ₽ | Report and reviewable pull requests | By scope |
 
-[Request a fixed-scope project review](https://dotnet-audit-studio.karloo1337228.chatgpt.site/en#request)
+[Request a fixed-scope project review](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en#request)
 
 ## Architecture
 
@@ -159,4 +159,4 @@ excluded areas, and any permitted AI use are agreed in writing before review.
 
 dotnet-audit-studio — .NET Backend & AI Readiness Audits
 
-- Website and project requests: [dotnet-audit-studio](https://dotnet-audit-studio.karloo1337228.chatgpt.site/en#request)
+- Website and project requests: [dotnet-audit-studio](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en#request)
