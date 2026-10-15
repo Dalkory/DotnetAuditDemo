@@ -119,6 +119,8 @@ those boundaries.
 Requirements: Docker Desktop with Compose.
 
 ```bash
+cp .env.example .env
+# Replace both placeholder values in .env before starting the stack.
 docker compose up --build
 ```
 

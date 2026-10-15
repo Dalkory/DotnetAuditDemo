@@ -1,4 +1,5 @@
 using DotnetAuditDemo.Infrastructure.Persistence;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,7 +9,7 @@ namespace DotnetAuditDemo.Api.Controllers;
 [Route("api/admin")]
 public sealed class AdminController(DemoDbContext dbContext) : ControllerBase
 {
-    // Deliberate defect: an administrative endpoint has no authorization policy.
+    [Authorize]
     [HttpGet("users")]
     public async Task<IActionResult> GetUsers()
     {
