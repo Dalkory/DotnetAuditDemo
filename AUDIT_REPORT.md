@@ -10,7 +10,7 @@ and CI
 
 **Reviewed by:** dotnet-audit-studio
 
-**Contact:** https://dotnet-audit-studio.karloo1337228.chatgpt.site/en#request
+**Contact:** https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en#request
 
 ## 1. Executive summary
 
