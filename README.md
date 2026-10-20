@@ -78,6 +78,23 @@ Start with:
   into deterministic metrics, anomalies, source-row evidence and Markdown
   without sending source rows to an external model.
 
+## Reproducible learning notes
+
+These four notes from dotnet-audit-studio use our own synthetic examples,
+separate from client work. Each includes code, recorded observations and limits.
+
+| Topic | Read and reproduce |
+|---|---|
+| Lost updates and revision checks | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/lost-update) |
+| Unknown JSON properties | [English note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en/notes/json-unknown-fields) |
+| A unique index with existing duplicates | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/unique-index-duplicates) |
+| Task.WhenAll exceptions and cancellation | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/task-when-all-exceptions) |
+
+Need help understanding a similar issue? [Discuss a paid learning
+review](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en?intent=paid-review#request).
+Goal, materials, scope, acceptance, price, time and permitted AI use are agreed
+before work. Do not submit secrets or private code through the public examples.
+
 ## Audit packages
 
 | Service | Starting price | Result | Delivery |
