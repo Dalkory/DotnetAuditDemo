@@ -27,28 +27,27 @@ public sealed class OrdersController(
             "Order creation failed");
 
     [HttpGet]
-    public async Task<ActionResult<IReadOnlyList<OrderDto>>> GetAll()
+    public async Task<ActionResult<IReadOnlyList<OrderDto>>> GetAll(
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 50)
     {
-        // Deliberate defects: unbounded materialization, no CancellationToken and an N+1 query.
-        var orders = await dbContext.Orders
+        page = Math.Max(page, 1);
+        pageSize = Math.Clamp(pageSize, 1, 100);
+
+        // Cancellation is intentionally left for a later implementation batch (F-006).
+        var response = await dbContext.Orders
+            .AsNoTracking()
             .OrderByDescending(order => order.CreatedAtUtc)
-            .ToListAsync();
-
-        var response = new List<OrderDto>(orders.Count);
-
-        foreach (var order in orders)
-        {
-            var customer = await dbContext.Customers.SingleAsync(
-                candidate => candidate.Id == order.CustomerId);
-
-            response.Add(new OrderDto(
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .Select(order => new OrderDto(
                 order.Id,
                 order.ExternalReference,
                 order.Amount,
                 order.Status.ToString(),
-                customer.Email,
-                order.CreatedAtUtc));
-        }
+                order.Customer.Email,
+                order.CreatedAtUtc))
+            .ToListAsync();
 
         return Ok(response);
     }

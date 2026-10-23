@@ -33,11 +33,8 @@ builder.Services.AddSwaggerGen(options =>
 var connectionString = builder.Configuration.GetConnectionString("Orders")
     ?? throw new InvalidOperationException("Connection string 'Orders' is missing.");
 
-// Deliberate defect: DbContext is not thread-safe and must not be a singleton.
 builder.Services.AddDbContext<DemoDbContext>(
-    options => options.UseNpgsql(connectionString),
-    contextLifetime: ServiceLifetime.Singleton,
-    optionsLifetime: ServiceLifetime.Singleton);
+    options => options.UseNpgsql(connectionString));
 
 // Deliberate defect: outbound HTTP calls can wait forever.
 builder.Services.AddHttpClient<ExchangeRateClient>(client =>
