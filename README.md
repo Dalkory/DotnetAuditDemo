@@ -85,10 +85,12 @@ separate from client work. Each includes code, recorded observations and limits.
 
 | Topic | Read and reproduce |
 |---|---|
-| Lost updates and revision checks | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/lost-update) |
-| Unknown JSON properties | [English note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en/notes/json-unknown-fields) |
-| A unique index with existing duplicates | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/unique-index-duplicates) |
+| Lost updates and revision checks | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/lost-update) · [Source and captured results](examples/lost-update/) |
+| Unknown JSON properties | [English note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en/notes/json-unknown-fields) · [Source and captured results](examples/json-unknown-fields/) |
+| A unique index with existing duplicates | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/unique-index-duplicates) · [Source and captured results](examples/unique-index/) |
 | Task.WhenAll exceptions and cancellation | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/task-when-all-exceptions) · [Source and captured results](examples/task-when-all/) |
+
+[Browse source and recorded evidence for all four notes](examples/).
 
 Need help understanding a similar issue? [Discuss a paid learning
 review](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en?intent=paid-review#request).

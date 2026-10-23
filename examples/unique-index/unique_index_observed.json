@@ -1,0 +1,302 @@
+{
+  "brand": "dotnet-audit-studio",
+  "input_kind": "own_synthetic",
+  "scope": "Two independent in-memory SQLite connections; fixed literal input; plain CREATE UNIQUE INDEX and one plain INSERT. No private database, real migration runner, EF Core, SQL Server, load, concurrency, deduplication or rollback test.",
+  "runtime": {
+    "python": "3.12.4",
+    "sqlite_library": "3.45.3",
+    "sqlite_source_id": "2024-04-15 13:34:05 8653b758870e6ef0c98d46b3ace27849054af85da891eb121e9aaa537f1e8355"
+  },
+  "connection_boundary": {
+    "database": ":memory:",
+    "independent_connections": 2,
+    "isolation_level": null,
+    "explicit_transactions": false
+  },
+  "duplicate_data_case": {
+    "before": {
+      "rows": [
+        [
+          1,
+          "demo:alpha",
+          "demo:payload-v1"
+        ],
+        [
+          2,
+          "demo:alpha",
+          "demo:payload-v2"
+        ],
+        [
+          3,
+          "demo:beta",
+          "demo:payload-v3"
+        ]
+      ],
+      "sqlite_storage_types": [
+        [
+          "integer",
+          "text",
+          "text"
+        ],
+        [
+          "integer",
+          "text",
+          "text"
+        ],
+        [
+          "integer",
+          "text",
+          "text"
+        ]
+      ],
+      "python_value_types": [
+        [
+          "int",
+          "str",
+          "str"
+        ],
+        [
+          "int",
+          "str",
+          "str"
+        ],
+        [
+          "int",
+          "str",
+          "str"
+        ]
+      ],
+      "duplicate_groups": [
+        [
+          "demo:alpha",
+          2
+        ]
+      ],
+      "indexes": [],
+      "in_transaction": false
+    },
+    "index_creation": {
+      "outcome": "error",
+      "exception_class": "IntegrityError",
+      "sqlite_errorcode": 2067,
+      "sqlite_errorname": "SQLITE_CONSTRAINT_UNIQUE",
+      "message": "UNIQUE constraint failed: demo_items.external_key"
+    },
+    "after_failed_index": {
+      "rows": [
+        [
+          1,
+          "demo:alpha",
+          "demo:payload-v1"
+        ],
+        [
+          2,
+          "demo:alpha",
+          "demo:payload-v2"
+        ],
+        [
+          3,
+          "demo:beta",
+          "demo:payload-v3"
+        ]
+      ],
+      "sqlite_storage_types": [
+        [
+          "integer",
+          "text",
+          "text"
+        ],
+        [
+          "integer",
+          "text",
+          "text"
+        ],
+        [
+          "integer",
+          "text",
+          "text"
+        ]
+      ],
+      "python_value_types": [
+        [
+          "int",
+          "str",
+          "str"
+        ],
+        [
+          "int",
+          "str",
+          "str"
+        ],
+        [
+          "int",
+          "str",
+          "str"
+        ]
+      ],
+      "duplicate_groups": [
+        [
+          "demo:alpha",
+          2
+        ]
+      ],
+      "indexes": [],
+      "in_transaction": false
+    }
+  },
+  "independent_unique_baseline_case": {
+    "before": {
+      "rows": [
+        [
+          1,
+          "demo:alpha",
+          "demo:payload-v1"
+        ],
+        [
+          2,
+          "demo:beta",
+          "demo:payload-v2"
+        ]
+      ],
+      "sqlite_storage_types": [
+        [
+          "integer",
+          "text",
+          "text"
+        ],
+        [
+          "integer",
+          "text",
+          "text"
+        ]
+      ],
+      "python_value_types": [
+        [
+          "int",
+          "str",
+          "str"
+        ],
+        [
+          "int",
+          "str",
+          "str"
+        ]
+      ],
+      "duplicate_groups": [],
+      "indexes": [],
+      "in_transaction": false
+    },
+    "index_creation": {
+      "outcome": "success",
+      "exception_class": null,
+      "sqlite_errorcode": null,
+      "sqlite_errorname": null,
+      "message": null
+    },
+    "after_index": {
+      "rows": [
+        [
+          1,
+          "demo:alpha",
+          "demo:payload-v1"
+        ],
+        [
+          2,
+          "demo:beta",
+          "demo:payload-v2"
+        ]
+      ],
+      "sqlite_storage_types": [
+        [
+          "integer",
+          "text",
+          "text"
+        ],
+        [
+          "integer",
+          "text",
+          "text"
+        ]
+      ],
+      "python_value_types": [
+        [
+          "int",
+          "str",
+          "str"
+        ],
+        [
+          "int",
+          "str",
+          "str"
+        ]
+      ],
+      "duplicate_groups": [],
+      "indexes": [
+        {
+          "name": "ux_demo_external_key",
+          "sql": "CREATE UNIQUE INDEX ux_demo_external_key ON demo_items(external_key)",
+          "unique": 1,
+          "origin": "c",
+          "partial": 0
+        }
+      ],
+      "in_transaction": false
+    },
+    "duplicate_insert": {
+      "outcome": "error",
+      "exception_class": "IntegrityError",
+      "sqlite_errorcode": 2067,
+      "sqlite_errorname": "SQLITE_CONSTRAINT_UNIQUE",
+      "message": "UNIQUE constraint failed: demo_items.external_key"
+    },
+    "after_rejected_insert": {
+      "rows": [
+        [
+          1,
+          "demo:alpha",
+          "demo:payload-v1"
+        ],
+        [
+          2,
+          "demo:beta",
+          "demo:payload-v2"
+        ]
+      ],
+      "sqlite_storage_types": [
+        [
+          "integer",
+          "text",
+          "text"
+        ],
+        [
+          "integer",
+          "text",
+          "text"
+        ]
+      ],
+      "python_value_types": [
+        [
+          "int",
+          "str",
+          "str"
+        ],
+        [
+          "int",
+          "str",
+          "str"
+        ]
+      ],
+      "duplicate_groups": [],
+      "indexes": [
+        {
+          "name": "ux_demo_external_key",
+          "sql": "CREATE UNIQUE INDEX ux_demo_external_key ON demo_items(external_key)",
+          "unique": 1,
+          "origin": "c",
+          "partial": 0
+        }
+      ],
+      "in_transaction": false
+    }
+  }
+}

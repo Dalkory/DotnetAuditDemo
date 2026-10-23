@@ -1,0 +1,191 @@
+{
+  "input_kind": "own_synthetic",
+  "expected_derivation": "Independent manually declared literal file; not copied from observed state.",
+  "all_checks_passed": true,
+  "check_count": 45,
+  "checks": [
+    {
+      "check": "input explicitly synthetic",
+      "passed": true
+    },
+    {
+      "check": "two separate in-memory connections",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data before: full row identity and values",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data before: SQLite storage types",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data before: Python value types",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data before: duplicate groups",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data before: exact index state",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data before: autocommit observation",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data after_failed_index: full row identity and values",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data after_failed_index: SQLite storage types",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data after_failed_index: Python value types",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data after_failed_index: duplicate groups",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data after_failed_index: exact index state",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data after_failed_index: autocommit observation",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data CREATE UNIQUE INDEX: outcome",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data CREATE UNIQUE INDEX: exception_class",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data CREATE UNIQUE INDEX: sqlite_errorcode",
+      "passed": true
+    },
+    {
+      "check": "duplicate-data CREATE UNIQUE INDEX: sqlite_errorname",
+      "passed": true
+    },
+    {
+      "check": "unique-data before: full row identity and values",
+      "passed": true
+    },
+    {
+      "check": "unique-data before: SQLite storage types",
+      "passed": true
+    },
+    {
+      "check": "unique-data before: Python value types",
+      "passed": true
+    },
+    {
+      "check": "unique-data before: duplicate groups",
+      "passed": true
+    },
+    {
+      "check": "unique-data before: exact index state",
+      "passed": true
+    },
+    {
+      "check": "unique-data before: autocommit observation",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_index: full row identity and values",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_index: SQLite storage types",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_index: Python value types",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_index: duplicate groups",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_index: exact index state",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_index: autocommit observation",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_rejected_insert: full row identity and values",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_rejected_insert: SQLite storage types",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_rejected_insert: Python value types",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_rejected_insert: duplicate groups",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_rejected_insert: exact index state",
+      "passed": true
+    },
+    {
+      "check": "unique-data after_rejected_insert: autocommit observation",
+      "passed": true
+    },
+    {
+      "check": "unique-data CREATE UNIQUE INDEX: outcome",
+      "passed": true
+    },
+    {
+      "check": "unique-data CREATE UNIQUE INDEX: exception_class",
+      "passed": true
+    },
+    {
+      "check": "unique-data CREATE UNIQUE INDEX: sqlite_errorcode",
+      "passed": true
+    },
+    {
+      "check": "unique-data CREATE UNIQUE INDEX: sqlite_errorname",
+      "passed": true
+    },
+    {
+      "check": "unique-data future duplicate INSERT: outcome",
+      "passed": true
+    },
+    {
+      "check": "unique-data future duplicate INSERT: exception_class",
+      "passed": true
+    },
+    {
+      "check": "unique-data future duplicate INSERT: sqlite_errorcode",
+      "passed": true
+    },
+    {
+      "check": "unique-data future duplicate INSERT: sqlite_errorname",
+      "passed": true
+    },
+    {
+      "check": "literal expected file unchanged by verification",
+      "passed": true
+    }
+  ],
+  "expected_file_sha256": "9f338d523dc312b288823a59f95981e3d2a313bfc48cc85defa44c7354402704",
+  "observed_file_sha256": "f0c4ce7674202dbde4638b0db9b8989441dc2038ae22c1278666188b8d521325",
+  "limits": "This verifies local SQLite observations and complete typed synthetic rows. It does not verify a customer database, migration provider, backup, rollback, load or business duplicate resolution."
+}

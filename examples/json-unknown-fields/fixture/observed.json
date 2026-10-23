@@ -1,0 +1,81 @@
+{
+  "brand": "dotnet-audit-studio",
+  "input_kind": "synthetic",
+  "scope": "One DTO; literal JSON; synchronous in-memory System.Text.Json deserialization; no HTTP/API client/custom converter",
+  "framework": ".NET 10.0.9",
+  "environment_version": "10.0.9",
+  "system_text_json_assembly_version": "10.0.0.0",
+  "target_framework": ".NETCoreApp,Version=v10.0",
+  "cases": [
+    {
+      "CaseId": "default_baseline",
+      "Mode": "default",
+      "Input": "{\u0022Id\u0022:42,\u0022Status\u0022:\u0022Open\u0022}",
+      "Outcome": "success",
+      "Id": 42,
+      "Status": "Open",
+      "ExceptionType": null,
+      "ExceptionPath": null
+    },
+    {
+      "CaseId": "default_extra",
+      "Mode": "default",
+      "Input": "{\u0022Id\u0022:42,\u0022Status\u0022:\u0022Open\u0022,\u0022Priority\u0022:\u0022High\u0022}",
+      "Outcome": "success",
+      "Id": 42,
+      "Status": "Open",
+      "ExceptionType": null,
+      "ExceptionPath": null
+    },
+    {
+      "CaseId": "skip_extra",
+      "Mode": "Skip",
+      "Input": "{\u0022Id\u0022:42,\u0022Status\u0022:\u0022Open\u0022,\u0022Priority\u0022:\u0022High\u0022}",
+      "Outcome": "success",
+      "Id": 42,
+      "Status": "Open",
+      "ExceptionType": null,
+      "ExceptionPath": null
+    },
+    {
+      "CaseId": "strict_baseline",
+      "Mode": "Disallow",
+      "Input": "{\u0022Id\u0022:42,\u0022Status\u0022:\u0022Open\u0022}",
+      "Outcome": "success",
+      "Id": 42,
+      "Status": "Open",
+      "ExceptionType": null,
+      "ExceptionPath": null
+    },
+    {
+      "CaseId": "strict_extra",
+      "Mode": "Disallow",
+      "Input": "{\u0022Id\u0022:42,\u0022Status\u0022:\u0022Open\u0022,\u0022Priority\u0022:\u0022High\u0022}",
+      "Outcome": "JsonException",
+      "Id": null,
+      "Status": null,
+      "ExceptionType": "System.Text.Json.JsonException",
+      "ExceptionPath": "$.Priority"
+    },
+    {
+      "CaseId": "default_wrong_type",
+      "Mode": "default",
+      "Input": "{\u0022Id\u0022:\u0022forty-two\u0022,\u0022Status\u0022:\u0022Open\u0022}",
+      "Outcome": "JsonException",
+      "Id": null,
+      "Status": null,
+      "ExceptionType": "System.Text.Json.JsonException",
+      "ExceptionPath": "$.Id"
+    },
+    {
+      "CaseId": "strict_wrong_type",
+      "Mode": "Disallow",
+      "Input": "{\u0022Id\u0022:\u0022forty-two\u0022,\u0022Status\u0022:\u0022Open\u0022}",
+      "Outcome": "JsonException",
+      "Id": null,
+      "Status": null,
+      "ExceptionType": "System.Text.Json.JsonException",
+      "ExceptionPath": "$.Id"
+    }
+  ]
+}

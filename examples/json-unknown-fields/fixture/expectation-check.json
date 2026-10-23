@@ -1,0 +1,42 @@
+{
+  "check": "independent_literal_expectations",
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "default_baseline",
+      "result": "PASS",
+      "expected": "Id=42, Status=Open"
+    },
+    {
+      "case": "default_extra",
+      "result": "PASS",
+      "expected": "Id=42, Status=Open"
+    },
+    {
+      "case": "skip_extra",
+      "result": "PASS",
+      "expected": "Id=42, Status=Open"
+    },
+    {
+      "case": "strict_baseline",
+      "result": "PASS",
+      "expected": "Id=42, Status=Open"
+    },
+    {
+      "case": "strict_extra",
+      "result": "PASS",
+      "expected_exception_path": "$.Priority"
+    },
+    {
+      "case": "default_wrong_type",
+      "result": "PASS",
+      "expected_exception_path": "$.Id"
+    },
+    {
+      "case": "strict_wrong_type",
+      "result": "PASS",
+      "expected_exception_path": "$.Id"
+    }
+  ],
+  "runtime": ".NET 10.0.9"
+}

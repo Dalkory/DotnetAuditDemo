@@ -1,0 +1,59 @@
+{
+  "input_kind": "synthetic",
+  "configuration": "Default DTO versus [JsonUnmappedMemberHandling(JsonUnmappedMemberHandling.Disallow)] DTO; default serializer options for both",
+  "framework": ".NET 10.0.9",
+  "runtime_version": "10.0.9",
+  "target_framework": ".NETCoreApp,Version=v10.0",
+  "cases": [
+    {
+      "CaseId": "default_baseline",
+      "Outcome": "success",
+      "Id": 42,
+      "Status": "Open",
+      "ExceptionType": null,
+      "ExceptionPath": null
+    },
+    {
+      "CaseId": "default_extra",
+      "Outcome": "success",
+      "Id": 42,
+      "Status": "Open",
+      "ExceptionType": null,
+      "ExceptionPath": null
+    },
+    {
+      "CaseId": "default_wrong_type",
+      "Outcome": "JsonException",
+      "Id": null,
+      "Status": null,
+      "ExceptionType": "System.Text.Json.JsonException",
+      "ExceptionPath": "$.Id"
+    },
+    {
+      "CaseId": "attribute_baseline",
+      "Outcome": "success",
+      "Id": 42,
+      "Status": "Open",
+      "ExceptionType": null,
+      "ExceptionPath": null
+    },
+    {
+      "CaseId": "attribute_extra",
+      "Outcome": "JsonException",
+      "Id": null,
+      "Status": null,
+      "ExceptionType": "System.Text.Json.JsonException",
+      "ExceptionPath": "$.Priority"
+    },
+    {
+      "CaseId": "attribute_wrong_type",
+      "Outcome": "JsonException",
+      "Id": null,
+      "Status": null,
+      "ExceptionType": "System.Text.Json.JsonException",
+      "ExceptionPath": "$.Id"
+    }
+  ],
+  "check_count": 6,
+  "all_checks_passed": true
+}

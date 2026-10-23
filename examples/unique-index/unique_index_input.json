@@ -1,0 +1,20 @@
+{
+  "brand": "dotnet-audit-studio",
+  "input_kind": "own_synthetic",
+  "schema_sql": "CREATE TABLE demo_items (demo_row INTEGER PRIMARY KEY, external_key TEXT NOT NULL, payload TEXT NOT NULL)",
+  "unique_index_sql": "CREATE UNIQUE INDEX ux_demo_external_key ON demo_items(external_key)",
+  "duplicate_data_case": {
+    "seed_rows": [
+      [1, "demo:alpha", "demo:payload-v1"],
+      [2, "demo:alpha", "demo:payload-v2"],
+      [3, "demo:beta", "demo:payload-v3"]
+    ]
+  },
+  "independent_unique_baseline_case": {
+    "seed_rows": [
+      [1, "demo:alpha", "demo:payload-v1"],
+      [2, "demo:beta", "demo:payload-v2"]
+    ],
+    "duplicate_insert_row": [3, "demo:alpha", "demo:payload-v3"]
+  }
+}

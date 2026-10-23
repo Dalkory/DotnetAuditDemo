@@ -1,0 +1,134 @@
+{
+  "kind": "existing_three_theme_source_and_historical_capture_copy",
+  "brand": "dotnet-audit-studio",
+  "copied_byte_identical_to_original_local_artifacts": true,
+  "scope": "The18copied files listed below; new Markdown guides and local analyzer-isolation config are excluded. Task.WhenAll retains its own original manifest. No fresh fixture, verifier, build or CI result is claimed.",
+  "files": [
+    {
+      "path": "examples/lost-update/lost_update_fixture.py",
+      "bytes": 2754,
+      "sha256": "c254c963167a6abafd29e84c8cb238c432e390c18c957cfb903683b7ef944c4d",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "lost_update_fixture.py"
+    },
+    {
+      "path": "examples/lost-update/lost-update-verification.json",
+      "bytes": 660,
+      "sha256": "01c65ddaa825bcf84b7460194c613b6c61f11e971ec80e240994dd7a093c0bc3",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "LOST_UPDATE_VERIFICATION.json"
+    },
+    {
+      "path": "examples/json-unknown-fields/global.json",
+      "bytes": 75,
+      "sha256": "e67cbfea6a001b75869cb8314b566bfd09e90ec5071c3f3e329faa59f062585d",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "global.json"
+    },
+    {
+      "path": "examples/json-unknown-fields/NuGet.Config",
+      "bytes": 125,
+      "sha256": "5256a7e3e07d2c5c94f7a1e6c45f39aab011c659c5e2d53e452dea525ce04575",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "NuGet.Config"
+    },
+    {
+      "path": "examples/json-unknown-fields/fixture/Program.cs",
+      "bytes": 2483,
+      "sha256": "ab7a437f856fdb2c0653125d9c8ff0f791e967f8e4eb05522478540c83061766",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "JSON_UNMAPPED_FIXTURE_SOURCE_20261012.cs"
+    },
+    {
+      "path": "examples/json-unknown-fields/fixture/JsonUnmappedDemo.csproj",
+      "bytes": 369,
+      "sha256": "7bde7eaec9e6e9df5f6cad3df3e4c7577298c8f83605258435866d4c29c2555f",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "JsonUnmappedDemo.csproj"
+    },
+    {
+      "path": "examples/json-unknown-fields/fixture/observed.json",
+      "bytes": 2626,
+      "sha256": "7c78618aa586b00dfa6d8c285d9eeba64b5dc4fb17d14c683be798e7bc226e0e",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "JSON_UNMAPPED_OBSERVED_20261012.json"
+    },
+    {
+      "path": "examples/json-unknown-fields/fixture/expectation-check.json",
+      "bytes": 925,
+      "sha256": "fb5fe417ab17cce476db11b4e85957c2dafe95edba024ad3feaee5f8966bce72",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "JSON_UNMAPPED_EXPECTATION_CHECK_20261012.json"
+    },
+    {
+      "path": "examples/json-unknown-fields/fixture/verify_expected.py",
+      "bytes": 2523,
+      "sha256": "192fd2eb329a5b8678113aabdecaa5032e181a53038deac56347fda22b558706",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "verify_expected.py"
+    },
+    {
+      "path": "examples/json-unknown-fields/attribute-probe/Program.cs",
+      "bytes": 3051,
+      "sha256": "44f80b83bed4974a42b758067d8609eb655eae51a5c790567012e2f91db42b22",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "Program.cs"
+    },
+    {
+      "path": "examples/json-unknown-fields/attribute-probe/IndependentProbe.csproj",
+      "bytes": 273,
+      "sha256": "68ec05f600440c4061cefeb29474e5c74363defffbcc925f5daea0125bddfca2",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "IndependentProbe.csproj"
+    },
+    {
+      "path": "examples/json-unknown-fields/attribute-probe/observed-attribute.json",
+      "bytes": 1579,
+      "sha256": "a1f80e95eaf60da47d5e3c95cd11a22c2dc74ad5e0a1cae15ec784191ce6e1b2",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "observed-attribute.json"
+    },
+    {
+      "path": "examples/unique-index/unique_index_fixture.py",
+      "bytes": 5432,
+      "sha256": "ad27c3008fd4e7325b76795ba52590e7c4ee8350d9362f7e36e09cd74fa47891",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "unique_index_fixture.py"
+    },
+    {
+      "path": "examples/unique-index/unique_index_input.json",
+      "bytes": 698,
+      "sha256": "39c4ed83e5f3e8119543310a085f03562e5c23bdcc91b9ccf321b8770fc49510",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "unique_index_input.json"
+    },
+    {
+      "path": "examples/unique-index/unique_index_literal_expected.json",
+      "bytes": 1850,
+      "sha256": "9f338d523dc312b288823a59f95981e3d2a313bfc48cc85defa44c7354402704",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "unique_index_literal_expected.json"
+    },
+    {
+      "path": "examples/unique-index/unique_index_observed.json",
+      "bytes": 6174,
+      "sha256": "f0c4ce7674202dbde4638b0db9b8989441dc2038ae22c1278666188b8d521325",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "unique_index_observed.json"
+    },
+    {
+      "path": "examples/unique-index/verify_unique_index_expected.py",
+      "bytes": 4268,
+      "sha256": "38705ea4b1702d60d73426a461bbf1a8823d4f8abf7d572f2b9b06ef8ce428c5",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "verify_unique_index_expected.py"
+    },
+    {
+      "path": "examples/unique-index/unique_index_expectation_check.json",
+      "bytes": 5305,
+      "sha256": "3b3f090cd3bf0b1824bee1574a1326084d05095fda242b3798cdc446e39e4dd3",
+      "source_kind": "existing_original_own_synthetic_artifact",
+      "original_filename": "unique_index_expectation_check.json"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "independent_literal_expected_outcomes",
+  "derivation": "Manually declared expectations. This file is not generated from input.json, observed rows, a serializer round-trip, a row count or a before-state snapshot.",
+  "row_columns": ["demo_row", "external_key", "payload"],
+  "sqlite_storage_types_per_row": ["integer", "text", "text"],
+  "python_value_types_per_row": ["int", "str", "str"],
+  "duplicate_data_case": {
+    "expected_rows_for_before_and_after_failed_index": [
+      [1, "demo:alpha", "demo:payload-v1"],
+      [2, "demo:alpha", "demo:payload-v2"],
+      [3, "demo:beta", "demo:payload-v3"]
+    ],
+    "expected_duplicate_groups": [["demo:alpha", 2]],
+    "expected_index_creation": {
+      "outcome": "error",
+      "exception_class": "IntegrityError",
+      "sqlite_errorcode": 2067,
+      "sqlite_errorname": "SQLITE_CONSTRAINT_UNIQUE"
+    },
+    "expected_indexes_before_and_after": [],
+    "expected_in_transaction_before_and_after": false
+  },
+  "independent_unique_baseline_case": {
+    "expected_rows_for_before_after_index_and_after_rejected_insert": [
+      [1, "demo:alpha", "demo:payload-v1"],
+      [2, "demo:beta", "demo:payload-v2"]
+    ],
+    "expected_duplicate_groups": [],
+    "expected_index_creation": {
+      "outcome": "success",
+      "exception_class": null,
+      "sqlite_errorcode": null,
+      "sqlite_errorname": null
+    },
+    "expected_duplicate_insert": {
+      "outcome": "error",
+      "exception_class": "IntegrityError",
+      "sqlite_errorcode": 2067,
+      "sqlite_errorname": "SQLITE_CONSTRAINT_UNIQUE"
+    },
+    "expected_index": {
+      "name": "ux_demo_external_key",
+      "sql": "CREATE UNIQUE INDEX ux_demo_external_key ON demo_items(external_key)",
+      "unique": 1,
+      "origin": "c",
+      "partial": 0
+    },
+    "expected_in_transaction_at_each_snapshot": false
+  }
+}

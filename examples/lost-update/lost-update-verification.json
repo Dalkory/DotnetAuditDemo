@@ -1,0 +1,29 @@
+{
+  "synthetic": true,
+  "sqlite_version": "3.45.3",
+  "coverage": "deterministic stale-read interleaving; no parallel connections or EF Core runtime",
+  "unsafe": {
+    "a_affected": 1,
+    "b_affected": 1,
+    "final": {
+      "status": "InProgress",
+      "revision": 1
+    }
+  },
+  "guarded": {
+    "a_affected": 1,
+    "b_affected": 0,
+    "after_commit": {
+      "status": "Done",
+      "revision": 2
+    }
+  },
+  "blind_retry": {
+    "affected": 1,
+    "final": {
+      "status": "InProgress",
+      "revision": 3
+    }
+  },
+  "acceptance": "PASS: stale write rejected; first result retained; blind retry changes outcome"
+}
