@@ -1,0 +1,39 @@
+name: Public example feedback / Замечание к примеру
+description: Report an error in this repository's public synthetic examples or documentation.
+title: "[Example feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue and its contents will be public.**
+        Use this form only for this repository's public synthetic examples or documentation.
+        Do not include secrets, credentials, private or client code, personal data, or client logs and screenshots.
+        Вопрос и его содержимое будут публичными. Не добавляйте секреты, клиентский код и персональные данные.
+
+        For a paid project, use [studio requests](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en?intent=studio#request).
+        For a paid learning review, use [review requests](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en?intent=paid-review#request).
+        Scope, acceptance, price, time, permitted materials and any private AI use are agreed before work.
+        Public feedback does not include bespoke diagnosis or a support response-time commitment.
+  - type: input
+    id: example_path
+    attributes:
+      label: Public repository path / Путь в репозитории
+      description: Identify the public example or documentation page and the relevant commit, if known.
+      placeholder: examples/task-when-all/README.md at a public commit
+    validations:
+      required: true
+  - type: textarea
+    id: discrepancy
+    attributes:
+      label: Expected and observed / Ожидание и наблюдение
+      description: Describe the discrepancy using only the repository's synthetic inputs. Include public line references where useful.
+      render: text
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_materials
+    attributes:
+      label: Public contents / Публичные материалы
+      options:
+        - label: I checked that this issue contains only public synthetic material and no secrets, private or client code, or personal data.
+          required: true
