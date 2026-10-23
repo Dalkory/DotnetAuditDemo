@@ -22,4 +22,4 @@ python lost_update_fixture.py
 
 The fixture prints JSON and asserts its synthetic invariants. It uses in-memory databases and performs no network or file writes. It is not a production concurrency benchmark, an EF Core integration test, a conflict-resolution policy, or a guarantee for another database provider.
 
-Read the [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/lost-update) or return to the [four-note library](../).
+Read the [Russian note](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/ru/notes/lost-update) or return to the [four-note library](../).

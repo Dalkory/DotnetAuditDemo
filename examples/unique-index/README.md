@@ -27,4 +27,4 @@ python verify_unique_index_expected.py
 
 Both commands print JSON; the fixture uses only its fixed local synthetic input and in-memory databases. A different Python/SQLite version is not the historical environment. This does not verify a real migration runner, EF Core, SQL Server, backup, rollback, load, concurrency or a business rule for resolving duplicates. Autocommit observations are not an explicit transaction/recovery test.
 
-Read the [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/unique-index-duplicates) or return to the [four-note library](../).
+Read the [Russian note](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/ru/notes/unique-index-duplicates) or return to the [four-note library](../).

@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/Dalkory/DotnetAuditDemo/actions/workflows/ci.yml/badge.svg)](https://github.com/Dalkory/DotnetAuditDemo/actions/workflows/ci.yml)
 [![View sample audit](https://img.shields.io/badge/View_sample_audit-Markdown-55C2FF)](AUDIT_REPORT.md)
-[![Request a review](https://img.shields.io/badge/Request_a_review-Scope_first-9FE870)](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en#request)
+[![Request a review](https://img.shields.io/badge/Request_a_review-Scope_first-9FE870)](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/en#request)
 
 An intentionally flawed ASP.NET Core backend used to demonstrate a practical
 `.NET Backend & AI Readiness Audit`.
@@ -85,15 +85,15 @@ separate from client work. Each includes code, recorded observations and limits.
 
 | Topic | Read and reproduce |
 |---|---|
-| Lost updates and revision checks | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/lost-update) · [Source and captured results](examples/lost-update/) |
-| Unknown JSON properties | [English note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en/notes/json-unknown-fields) · [Source and captured results](examples/json-unknown-fields/) |
-| A unique index with existing duplicates | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/unique-index-duplicates) · [Source and captured results](examples/unique-index/) |
-| Task.WhenAll exceptions and cancellation | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/task-when-all-exceptions) · [Source and captured results](examples/task-when-all/) |
+| Lost updates and revision checks | [Russian note](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/ru/notes/lost-update) · [Source and captured results](examples/lost-update/) |
+| Unknown JSON properties | [English note](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/en/notes/json-unknown-fields) · [Source and captured results](examples/json-unknown-fields/) |
+| A unique index with existing duplicates | [Russian note](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/ru/notes/unique-index-duplicates) · [Source and captured results](examples/unique-index/) |
+| Task.WhenAll exceptions and cancellation | [Russian note](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/ru/notes/task-when-all-exceptions) · [Source and captured results](examples/task-when-all/) |
 
 [Browse source and recorded evidence for all four notes](examples/).
 
 Need help understanding a similar issue? [Discuss a paid learning
-review](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en?intent=paid-review#request).
+review](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/en?intent=paid-review#request).
 Goal, materials, scope, acceptance, price, time and permitted AI use are agreed
 before work. Do not submit secrets or private code through the public examples.
 
@@ -116,7 +116,7 @@ before work. Do not submit secrets or private code through the public examples.
 | Full audit | 50,000–80,000 ₽ | Complete technical assessment | 5–7 business days |
 | Audit + remediation | From 100,000 ₽ | Report and reviewable pull requests | By scope |
 
-[Request a fixed-scope project review](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en#request)
+[Request a fixed-scope project review](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/en#request)
 
 ## Architecture
 
@@ -178,4 +178,4 @@ excluded areas, and any permitted AI use are agreed in writing before review.
 
 dotnet-audit-studio — .NET Backend & AI Readiness Audits
 
-- Website and project requests: [dotnet-audit-studio](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en#request)
+- Website and project requests: [dotnet-audit-studio](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/en#request)

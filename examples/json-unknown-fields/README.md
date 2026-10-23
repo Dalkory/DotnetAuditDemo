@@ -30,4 +30,4 @@ python fixture/verify_expected.py fixture/observed.json
 
 This exercise does not test HTTP clients, ASP.NET model binding, custom converters, enums, a cross-version matrix, performance or production compatibility.
 
-Read the [English note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en/notes/json-unknown-fields) or return to the [four-note library](../).
+Read the [English note](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/en/notes/json-unknown-fields) or return to the [four-note library](../).

@@ -13,4 +13,4 @@ Each guide separates what the original run observed from what it did not test. P
 
 [source-manifest.json](source-manifest.json) records byte hashes for the three original bundles added alongside Task.WhenAll. Task.WhenAll has its [original manifest](task-when-all/manifest.json). The repository's [MIT license](../LICENSE) applies.
 
-For a [paid learning review](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en?intent=paid-review#request) or a [bounded studio result](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en#request), scope, permitted materials, acceptance, price, timing and private-code AI permission are agreed before work begins.
+For a [paid learning review](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/en?intent=paid-review#request) or a [bounded studio result](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/en#request), scope, permitted materials, acceptance, price, timing and private-code AI permission are agreed before work begins.

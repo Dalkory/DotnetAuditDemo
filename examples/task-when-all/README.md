@@ -44,8 +44,8 @@ This standalone .NET 10 example is outside the repository's main .NET 8 solution
 
 ## Related note and paid review
 
-Read the [Russian Task.WhenAll note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/task-when-all-exceptions) or watch the [existing explanation](https://www.youtube.com/watch?v=7o-8zznYwz0).
+Read the [Russian Task.WhenAll note](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/ru/notes/task-when-all-exceptions) or watch the [existing explanation](https://www.youtube.com/watch?v=7o-8zznYwz0).
 
-For a [paid review of a bounded code sample](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en?intent=paid-review#request), scope, permitted materials, acceptance, price, timing and private-code AI permission are agreed before work begins.
+For a [paid review of a bounded code sample](https://dotnet-audit-studio.dtauskanov3.chatgpt.site/en?intent=paid-review#request), scope, permitted materials, acceptance, price, timing and private-code AI permission are agreed before work begins.
 
 The repository's [MIT license](../../LICENSE) applies.
