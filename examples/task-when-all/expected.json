@@ -1,0 +1,78 @@
+{
+  "kind": "independent_literal_expected_contract",
+  "proof_kind": "demo:task-when-all-explicit-completion",
+  "runtime_version": "10.0.9",
+  "sdk_version": "10.0.301",
+  "scenarios": [
+    {
+      "id": "demo:two-faults-third-pending",
+      "before": {
+        "combined_status": "WaitingForActivation",
+        "combined_faults": [],
+        "inputs": [
+          {"id": "demo:fault-a", "status": "Faulted", "faults": [{"type": "System.InvalidOperationException", "message": "demo:first-fault"}]},
+          {"id": "demo:fault-b", "status": "Faulted", "faults": [{"type": "System.ArgumentException", "message": "demo:second-fault"}]},
+          {"id": "demo:pending-success", "status": "WaitingForActivation", "faults": []}
+        ]
+      },
+      "after": {
+        "combined_status": "Faulted",
+        "combined_faults": [
+          {"type": "System.ArgumentException", "message": "demo:second-fault"},
+          {"type": "System.InvalidOperationException", "message": "demo:first-fault"}
+        ],
+        "inputs": [
+          {"id": "demo:fault-a", "status": "Faulted", "faults": [{"type": "System.InvalidOperationException", "message": "demo:first-fault"}]},
+          {"id": "demo:fault-b", "status": "Faulted", "faults": [{"type": "System.ArgumentException", "message": "demo:second-fault"}]},
+          {"id": "demo:pending-success", "status": "RanToCompletion", "faults": []}
+        ]
+      },
+      "await_contract": "one_of_recorded_faults_without_choice_or_order_assertion"
+    },
+    {
+      "id": "demo:fault-plus-canceled",
+      "before": {
+        "combined_status": "WaitingForActivation",
+        "combined_faults": [],
+        "inputs": [
+          {"id": "demo:fault", "status": "Faulted", "faults": [{"type": "System.InvalidOperationException", "message": "demo:mixed-fault"}]},
+          {"id": "demo:canceled", "status": "WaitingForActivation", "faults": []}
+        ]
+      },
+      "after": {
+        "combined_status": "Faulted",
+        "combined_faults": [{"type": "System.InvalidOperationException", "message": "demo:mixed-fault"}],
+        "inputs": [
+          {"id": "demo:fault", "status": "Faulted", "faults": [{"type": "System.InvalidOperationException", "message": "demo:mixed-fault"}]},
+          {"id": "demo:canceled", "status": "Canceled", "faults": []}
+        ]
+      },
+      "await_contract": "one_of_recorded_faults_without_choice_or_order_assertion"
+    },
+    {
+      "id": "demo:only-canceled",
+      "before": {
+        "combined_status": "WaitingForActivation",
+        "combined_faults": [],
+        "inputs": [
+          {"id": "demo:canceled-a", "status": "Canceled", "faults": []},
+          {"id": "demo:canceled-b", "status": "WaitingForActivation", "faults": []}
+        ]
+      },
+      "after": {
+        "combined_status": "Canceled",
+        "combined_faults": [],
+        "inputs": [
+          {"id": "demo:canceled-a", "status": "Canceled", "faults": []},
+          {"id": "demo:canceled-b", "status": "Canceled", "faults": []}
+        ]
+      },
+      "await_contract": "operation_canceled_exception_compatible_no_subtype_message_or_token_assertion"
+    }
+  ],
+  "limits": [
+    "Three synthetic controlled-completion scenarios, not checks-as-new-cases.",
+    "WaitingForActivation is a literal expected observation for this selected runtime, not the portable headline invariant.",
+    "No chosen await fault, aggregate order, scheduler, timing, parallel client, HTTP, stress, retry or logging policy claim."
+  ]
+}

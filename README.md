@@ -88,7 +88,7 @@ separate from client work. Each includes code, recorded observations and limits.
 | Lost updates and revision checks | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/lost-update) |
 | Unknown JSON properties | [English note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en/notes/json-unknown-fields) |
 | A unique index with existing duplicates | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/unique-index-duplicates) |
-| Task.WhenAll exceptions and cancellation | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/task-when-all-exceptions) |
+| Task.WhenAll exceptions and cancellation | [Russian note](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/ru/notes/task-when-all-exceptions) · [Source and captured results](examples/task-when-all/) |
 
 Need help understanding a similar issue? [Discuss a paid learning
 review](https://dotnet-audit-studio.dtaatdaa.chatgpt.site/en?intent=paid-review#request).

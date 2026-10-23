@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "proof_kind": "demo:task-when-all-explicit-completion",
+  "observed_at_utc": "2026-10-13T11:59:08.3771105+00:00",
+  "runtime": {
+    "runtime_version": "10.0.9",
+    "framework_description": ".NET 10.0.9",
+    "sdk_version": "10.0.301"
+  },
+  "scenarios": [
+    {
+      "id": "demo:two-faults-third-pending",
+      "before_final_completion": {
+        "combined": {
+          "id": "demo:when-all",
+          "status": "WaitingForActivation",
+          "is_completed": false,
+          "is_faulted": false,
+          "is_canceled": false,
+          "exception_is_null": true,
+          "fault_count": 0,
+          "faults": []
+        },
+        "inputs": [
+          {
+            "id": "demo:fault-a",
+            "status": "Faulted",
+            "is_completed": true,
+            "is_faulted": true,
+            "is_canceled": false,
+            "exception_is_null": false,
+            "fault_count": 1,
+            "faults": [
+              {
+                "type": "System.InvalidOperationException",
+                "message": "demo:first-fault"
+              }
+            ]
+          },
+          {
+            "id": "demo:fault-b",
+            "status": "Faulted",
+            "is_completed": true,
+            "is_faulted": true,
+            "is_canceled": false,
+            "exception_is_null": false,
+            "fault_count": 1,
+            "faults": [
+              {
+                "type": "System.ArgumentException",
+                "message": "demo:second-fault"
+              }
+            ]
+          },
+          {
+            "id": "demo:pending-success",
+            "status": "WaitingForActivation",
+            "is_completed": false,
+            "is_faulted": false,
+            "is_canceled": false,
+            "exception_is_null": true,
+            "fault_count": 0,
+            "faults": []
+          }
+        ]
+      },
+      "after_final_completion": {
+        "combined": {
+          "id": "demo:when-all",
+          "status": "Faulted",
+          "is_completed": true,
+          "is_faulted": true,
+          "is_canceled": false,
+          "exception_is_null": false,
+          "fault_count": 2,
+          "faults": [
+            {
+              "type": "System.ArgumentException",
+              "message": "demo:second-fault"
+            },
+            {
+              "type": "System.InvalidOperationException",
+              "message": "demo:first-fault"
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "id": "demo:fault-a",
+            "status": "Faulted",
+            "is_completed": true,
+            "is_faulted": true,
+            "is_canceled": false,
+            "exception_is_null": false,
+            "fault_count": 1,
+            "faults": [
+              {
+                "type": "System.InvalidOperationException",
+                "message": "demo:first-fault"
+              }
+            ]
+          },
+          {
+            "id": "demo:fault-b",
+            "status": "Faulted",
+            "is_completed": true,
+            "is_faulted": true,
+            "is_canceled": false,
+            "exception_is_null": false,
+            "fault_count": 1,
+            "faults": [
+              {
+                "type": "System.ArgumentException",
+                "message": "demo:second-fault"
+              }
+            ]
+          },
+          {
+            "id": "demo:pending-success",
+            "status": "RanToCompletion",
+            "is_completed": true,
+            "is_faulted": false,
+            "is_canceled": false,
+            "exception_is_null": true,
+            "fault_count": 0,
+            "faults": []
+          }
+        ]
+      },
+      "await": {
+        "returned_normally": false,
+        "caught": {
+          "type": "System.InvalidOperationException",
+          "message": "demo:first-fault",
+          "is_operation_canceled_exception": false
+        }
+      }
+    },
+    {
+      "id": "demo:fault-plus-canceled",
+      "before_final_completion": {
+        "combined": {
+          "id": "demo:when-all",
+          "status": "WaitingForActivation",
+          "is_completed": false,
+          "is_faulted": false,
+          "is_canceled": false,
+          "exception_is_null": true,
+          "fault_count": 0,
+          "faults": []
+        },
+        "inputs": [
+          {
+            "id": "demo:fault",
+            "status": "Faulted",
+            "is_completed": true,
+            "is_faulted": true,
+            "is_canceled": false,
+            "exception_is_null": false,
+            "fault_count": 1,
+            "faults": [
+              {
+                "type": "System.InvalidOperationException",
+                "message": "demo:mixed-fault"
+              }
+            ]
+          },
+          {
+            "id": "demo:canceled",
+            "status": "WaitingForActivation",
+            "is_completed": false,
+            "is_faulted": false,
+            "is_canceled": false,
+            "exception_is_null": true,
+            "fault_count": 0,
+            "faults": []
+          }
+        ]
+      },
+      "after_final_completion": {
+        "combined": {
+          "id": "demo:when-all",
+          "status": "Faulted",
+          "is_completed": true,
+          "is_faulted": true,
+          "is_canceled": false,
+          "exception_is_null": false,
+          "fault_count": 1,
+          "faults": [
+            {
+              "type": "System.InvalidOperationException",
+              "message": "demo:mixed-fault"
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "id": "demo:fault",
+            "status": "Faulted",
+            "is_completed": true,
+            "is_faulted": true,
+            "is_canceled": false,
+            "exception_is_null": false,
+            "fault_count": 1,
+            "faults": [
+              {
+                "type": "System.InvalidOperationException",
+                "message": "demo:mixed-fault"
+              }
+            ]
+          },
+          {
+            "id": "demo:canceled",
+            "status": "Canceled",
+            "is_completed": true,
+            "is_faulted": false,
+            "is_canceled": true,
+            "exception_is_null": true,
+            "fault_count": 0,
+            "faults": []
+          }
+        ]
+      },
+      "await": {
+        "returned_normally": false,
+        "caught": {
+          "type": "System.InvalidOperationException",
+          "message": "demo:mixed-fault",
+          "is_operation_canceled_exception": false
+        }
+      }
+    },
+    {
+      "id": "demo:only-canceled",
+      "before_final_completion": {
+        "combined": {
+          "id": "demo:when-all",
+          "status": "WaitingForActivation",
+          "is_completed": false,
+          "is_faulted": false,
+          "is_canceled": false,
+          "exception_is_null": true,
+          "fault_count": 0,
+          "faults": []
+        },
+        "inputs": [
+          {
+            "id": "demo:canceled-a",
+            "status": "Canceled",
+            "is_completed": true,
+            "is_faulted": false,
+            "is_canceled": true,
+            "exception_is_null": true,
+            "fault_count": 0,
+            "faults": []
+          },
+          {
+            "id": "demo:canceled-b",
+            "status": "WaitingForActivation",
+            "is_completed": false,
+            "is_faulted": false,
+            "is_canceled": false,
+            "exception_is_null": true,
+            "fault_count": 0,
+            "faults": []
+          }
+        ]
+      },
+      "after_final_completion": {
+        "combined": {
+          "id": "demo:when-all",
+          "status": "Canceled",
+          "is_completed": true,
+          "is_faulted": false,
+          "is_canceled": true,
+          "exception_is_null": true,
+          "fault_count": 0,
+          "faults": []
+        },
+        "inputs": [
+          {
+            "id": "demo:canceled-a",
+            "status": "Canceled",
+            "is_completed": true,
+            "is_faulted": false,
+            "is_canceled": true,
+            "exception_is_null": true,
+            "fault_count": 0,
+            "faults": []
+          },
+          {
+            "id": "demo:canceled-b",
+            "status": "Canceled",
+            "is_completed": true,
+            "is_faulted": false,
+            "is_canceled": true,
+            "exception_is_null": true,
+            "fault_count": 0,
+            "faults": []
+          }
+        ]
+      },
+      "await": {
+        "returned_normally": false,
+        "caught": {
+          "type": "System.Threading.Tasks.TaskCanceledException",
+          "message": "A task was canceled.",
+          "is_operation_canceled_exception": true
+        }
+      }
+    }
+  ]
+}

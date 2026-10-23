@@ -1,0 +1,51 @@
+{
+  "kind": "own_synthetic_task_when_all_public_source_bundle",
+  "brand": "dotnet-audit-studio",
+  "scenarios": 3,
+  "saved_checks_not_cases": 485,
+  "saved_sdk": "10.0.301",
+  "saved_runtime": ".NET 10.0.9",
+  "files": [
+    {
+      "file": "Program.cs",
+      "sha256": "2af50182f6e10d86b1ee5f49a102fd257d75ed3cac438c3e38163c81e0f4acf1",
+      "bytes": 5011
+    },
+    {
+      "file": "TaskWhenAllProof.csproj",
+      "sha256": "76907be7bf20b7494f206d7f17f789ba99fa1ab290317e92761ed9769d710d78",
+      "bytes": 382
+    },
+    {
+      "file": "global.json",
+      "sha256": "a0fc2efcd4cc3a24444007b6e49f5b3c754e9d9e1869052c6ab7bdcba7cb7960",
+      "bytes": 105
+    },
+    {
+      "file": "NuGet.Config",
+      "sha256": "5256a7e3e07d2c5c94f7a1e6c45f39aab011c659c5e2d53e452dea525ce04575",
+      "bytes": 125
+    },
+    {
+      "file": "verify_observed.py",
+      "sha256": "3aedb3f2111258e14ef109dbe47a3fb2f4b97ab5795cea0c971feb6f1b0456c8",
+      "bytes": 9472
+    },
+    {
+      "file": "expected.json",
+      "sha256": "2ff2328ea5e73c724de879c691e2e5a3ba817c80ff37607ed1dba445222621d6",
+      "bytes": 3490
+    },
+    {
+      "file": "observed.json",
+      "sha256": "dfa534e213830dac618d434bc731d529cc7cc8ab4594e816e74b890ab3e8f4c9",
+      "bytes": 9036
+    },
+    {
+      "file": "README.txt",
+      "sha256": "2015c41351f6ac3049adf2602976029b2552a4b0dfca86099063d2484440e7ce",
+      "bytes": 2797
+    }
+  ],
+  "fixture_or_verifier_reexecuted_when_packaging": false
+}
