@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 namespace DotnetAuditDemo.Api.BackgroundJobs;
 
 public sealed class InvoiceReminderWorker(
-    DemoDbContext dbContext,
+    IServiceScopeFactory scopeFactory,
     ILogger<InvoiceReminderWorker> logger) : BackgroundService
 {
     private static readonly Action<ILogger, int, Exception?> LogPendingInvoices =
@@ -18,6 +18,9 @@ public sealed class InvoiceReminderWorker(
         while (!stoppingToken.IsCancellationRequested)
         {
             await Task.Delay(TimeSpan.FromMinutes(5), stoppingToken);
+
+            using var scope = scopeFactory.CreateScope();
+            var dbContext = scope.ServiceProvider.GetRequiredService<DemoDbContext>();
 
             // Deliberate sync-over-async problem inside a background worker.
             var pendingCount = dbContext.Orders.CountAsync(
